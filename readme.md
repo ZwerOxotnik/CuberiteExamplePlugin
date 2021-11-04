@@ -33,7 +33,7 @@ curl -L https://raw.githubusercontent.com/pkulchenko/ZeroBranePackage/master/cub
 mkdir -p cuberite &&\
 	cd cuberite &&\
 	curl -sSfL https://download.cuberite.org | sh &&\
-	./cuberite
+	./Cuberite
 ```
 
 After Cuberite loaded your server, use the commands below one by one to get API files & .luacheckrc
