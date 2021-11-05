@@ -1,0 +1,15 @@
+on:
+  push:
+    branches:
+      - main
+
+name: Lint
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+      - name: lint
+        uses: nebularg/actions-luacheck@v1
+        with:
+          config: https://gist.githubusercontent.com/ZwerOxotnik/7db531cd3929535a79dc73359d9cc126/raw/033fedebc68f4324922b78981eb3352605b38e24/.luacheckrc
