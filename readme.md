@@ -75,13 +75,13 @@ You're ready to use [ZeroBrane Studio](https://studio.zerobrane.com/) for [Cuber
 
 Let's load plugins, but first we need to set username, password in `webadmin.ini`.\
 Uncomment 5th and 6th lines in `webadmin.ini`. Remember, default password is's not [safe](https://its.lafayette.edu/policies/strongpasswords/) etc.
-```
+```ini
 [User:admin]
 Password=admin
 ```
 
 Open your browser and type this [localhost:8080](localhost:8080) as url to open WebAadmin. As the site loaded, press `Log in`, enter the username and password, then click `Sign in`.\
-After you signed in, press `Plugins` and find `HotReload`, `PluginMemory`, `PerfPages`, `APIFuzzing` and press `Enable` button for the plugins. (Btw, APIFuzzing will prevent loading if there are some mistakes in plugins)\
+After you signed in, press `Plugins` and find `HotReload`, `PluginMemory`, `PerfPages`, `APIFuzzing` and press `Enable` button for the plugins. (Btw, APIFuzzing will prevent loading if there are some mistakes in active plugins)\
 Now press `Reload now` button and you're ready to use plugins and the server.
 
 Important info
@@ -95,7 +95,7 @@ Lua
 
 [Cuberite] plugins uses [lua 5.1], if you want to use external lua tools or other IDEs then read it, otherwise skip to section [Notes](#notes).
 
-If don't have experience with lua with then read [this](https://github.com/pohka/Lua-Beginners-Guide) or [this](https://stigmax.gitbook.io/lua-guide/) or watch a some video on [youtube]. For instance: https://www.youtube.com/watch?v=HDAE9OR28gY&list=PL9URkxPt-PndpZlw8m_NHh0vUBU5J-BRF
+If don't have experience with lua with then read [this](https://github.com/pohka/Lua-Beginners-Guide) or [this](https://stigmax.gitbook.io/lua-guide/) or watch a some video on [youtube]. For instance: ["Lua for Beginners"](https://www.youtube.com/watch?v=HDAE9OR28gY&list=PL9URkxPt-PndpZlw8m_NHh0vUBU5J-BRF).
 
 I recommend to install [luaver] for managing versions of Lua and [luarocks].
 
@@ -130,7 +130,7 @@ You can now use it with other IDEs and download and use tools like: [luacheck], 
 Notes
 -----
 
-* If you're not familiar with git, then read [this](https://web.archive.org/web/20121113215322/http://rogerdudler.github.com:80/git-guide/) or watch a some video on [youtube]. For instance: https://www.youtube.com/watch?v=USjZcfj8yxE
+* If you're not familiar with git, then read [this](https://web.archive.org/web/20121113215322/http://rogerdudler.github.com:80/git-guide/) or watch a some video on [youtube]. For instance: ["Learn Git In 15 Minutes"](https://www.youtube.com/watch?v=USjZcfj8yxE). Though you might use other programs/extenstions instead of cli for git.
 * [.scripts](./.scripts) folder isn't necessary, but those scripts might be useful for you.
 * [.vscode](./.vscode) folder uses for [Visual Studio Code](https://code.visualstudio.com/), and it's not necessary for any other editor
 * [.editorconfig](./.editorconfig) file isn't necessary for Zero Brain Studio, because it doesn't support it. Nonetheless, it may be useful for other editors. More information on https://editorconfig.org/
