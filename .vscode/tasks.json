@@ -1,0 +1,13 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "luacheck",
+      "type": "shell",
+      "problemMatcher": [],
+      "command": "bash",
+      "args": [".scripts/luacheck.sh"],
+      "group": "test"
+    }
+  ]
+}
