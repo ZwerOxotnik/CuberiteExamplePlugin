@@ -7,6 +7,8 @@ Example plugin for [Cuberite](https://cuberite.org/) - **WIP**
 
 **This repository isn't official. Please, visit https://api.cuberite.org/ to get full information about API etc.**
 
+Also, you can get more info on [Cuberite Discord](https://discord.gg/76w5J6M) and on [Cuberite forum](https://forum.cuberite.org/).
+
 Currently, this repository has only brief information and some scripts for Linux to help you use and install all necessary stuff to develop [Cuberite plugins](https://api.cuberite.org/Writing-a-Cuberite-plugin.html).
 
 Installation & configuration
@@ -85,7 +87,8 @@ Now press `Reload now` button and you're ready to use plugins and the server.
 Important info
 --------------
 
-Plugin name and folder name should be identical, otherwise it may cause some problems with other plugins.
+Plugin name and folder name should be identical, otherwise it may cause some problems with other plugins.\
+Please, keep plugins on GitHub, because it gives you a possibility to show them on https://plugins.cuberite.org/.
 
 Lua
 ---
