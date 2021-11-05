@@ -87,13 +87,15 @@ Now press `Reload now` button and you're ready to use plugins and the server.
 Important info
 --------------
 
-Plugin name and folder name should be identical, otherwise it may cause some problems with other plugins.\
-Please, keep plugins on GitHub, because it gives you a possibility to show them on https://plugins.cuberite.org/.
+* Plugin name and folder name should be identical, otherwise it may cause some problems with other plugins.
+* Please, keep plugins on GitHub, because it gives you a possibility to show them on https://plugins.cuberite.org/.
 
 Lua
 ---
 
 [Cuberite] plugins uses [lua 5.1], if you want to use external lua tools or other IDEs then read it, otherwise skip to section [Notes](#notes).
+
+If don't have experience with lua with then read [this](https://github.com/pohka/Lua-Beginners-Guide) or [this](https://stigmax.gitbook.io/lua-guide/) or watch a some video on [youtube]. For instance: https://www.youtube.com/watch?v=HDAE9OR28gY&list=PL9URkxPt-PndpZlw8m_NHh0vUBU5J-BRF
 
 I recommend to install [luaver] for managing versions of Lua and [luarocks].
 
@@ -128,12 +130,13 @@ You can now use it with other IDEs and download and use tools like: [luacheck], 
 Notes
 -----
 
+* If you're not familiar with git, then read [this](https://web.archive.org/web/20121113215322/http://rogerdudler.github.com:80/git-guide/) or watch a some video on [youtube]. For instance: https://www.youtube.com/watch?v=USjZcfj8yxE
 * [.scripts](./.scripts) folder isn't necessary, but those scripts might be useful for you.
 * [.vscode](./.vscode) folder uses for [Visual Studio Code](https://code.visualstudio.com/), and it's not necessary for any other editor
 * [.editorconfig](./.editorconfig) file isn't necessary for Zero Brain Studio, because it doesn't support it. Nonetheless, it may be useful for other editors. More information on https://editorconfig.org/
 * [lint.yml](./github/workflows/lint.yml) uses as a [GitHub action](https://github.com/features/actions) for linting. Example: https://github.com/ZwerOxotnik/CuberiteExamplePlugin/runs/4114814565
-* Perhaps, [EmmyLua](https://github.com/sumneko/lua-language-server/wiki/EmmyLua-Annotations) might be useful.
 * Optimization tips: https://stigmax.gitbook.io/lua-guide/auxiliary/optimizations & http://lua-users.org/wiki/OptimisationTips & https://springrts.com/wiki/Lua_Performance & https://www.lua.org/gems/sample.pdf & [tips](https://stackoverflow.com/questions/154672/what-can-i-do-to-increase-the-performance-of-a-lua-program) (please, notice that Cuberite plugins uses [lua 5.1], so some tips might be **irrelevant!**) & [Performance Comparison](https://eklausmeier.wordpress.com/2020/05/14/performance-comparison-pallene-vs-lua-5-1-5-2-5-3-5-4-vs-c/) & https://gitspartv.github.io/LuaJIT-Benchmarks/
+* ~~Perhaps, [EmmyLua](https://github.com/sumneko/lua-language-server/wiki/EmmyLua-Annotations) might be useful.~~
 * I should add more examples and info
 
 License
@@ -172,3 +175,4 @@ SOFTWARE.
 [lua 5.1]: https://www.lua.org/manual/5.1/
 [luacheck]: https://github.com/mpeterv/luacheck
 [LuaFormatter]: https://github.com/Koihik/LuaFormatter
+[youtube]: https://www.youtube.com/
