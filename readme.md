@@ -128,6 +128,7 @@ Notes
 * [.scripts](./.scripts) folder isn't necessary, but those scripts might be useful for you.
 * [.vscode](./.vscode) folder uses for [Visual Studio Code](https://code.visualstudio.com/), and it's not necessary for any other editor
 * [.editorconfig](./.editorconfig) file isn't necessary for Zero Brain Studio, because it doesn't support it. Nonetheless, it may be useful for other editors. More information on https://editorconfig.org/
+* [lint.yml](./github/workflows/lint.yml) uses as a [GitHub action](https://github.com/features/actions) for linting. Example: https://github.com/ZwerOxotnik/CuberiteExamplePlugin/runs/4114814565
 * Perhaps, [EmmyLua](https://github.com/sumneko/lua-language-server/wiki/EmmyLua-Annotations) might be useful.
 * Optimization tips: https://stigmax.gitbook.io/lua-guide/auxiliary/optimizations & http://lua-users.org/wiki/OptimisationTips & https://springrts.com/wiki/Lua_Performance & https://www.lua.org/gems/sample.pdf & [tips](https://stackoverflow.com/questions/154672/what-can-i-do-to-increase-the-performance-of-a-lua-program) (please, notice that Cuberite plugins uses [lua 5.1], so some tips might be **irrelevant!**) & [Performance Comparison](https://eklausmeier.wordpress.com/2020/05/14/performance-comparison-pallene-vs-lua-5-1-5-2-5-3-5-4-vs-c/) & https://gitspartv.github.io/LuaJIT-Benchmarks/
 * I should add more examples and info
