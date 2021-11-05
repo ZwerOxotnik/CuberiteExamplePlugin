@@ -1,3 +1,4 @@
+-- https://api.cuberite.org/
 -- https://api.cuberite.org/Writing-a-Cuberite-plugin.html
 
 function Initialize(Plugin)
