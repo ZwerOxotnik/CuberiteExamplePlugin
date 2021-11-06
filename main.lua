@@ -4,6 +4,7 @@
 -- Nevertheless, I hope these examples can help to newcomers etc. Perhaps, there are some issues, so let people know about it.
 
 local root = cRoot:Get() -- https://api.cuberite.org/cRoot.html
+local defaultWorld = root:GetDefaultWorld()
 
 -- The most important stuff here (https://api.cuberite.org/Writing-a-Cuberite-plugin.html)
 -- function Initialize is called on plugin startup. It is the place where the plugin is set up.
@@ -29,9 +30,12 @@ function OnDisable()
 end
 
 ---@param player table # https://api.cuberite.org/cPlayer.html
-local function teleportPlayerToCenter(player)
-  -- You can improve it using player:FindTeleportDestination
-  player:TeleportToCoords(0, 80, 0) -- x, y, z
+local function teleportPlayerToMainSpawn(player)
+  player:TeleportToCoords(
+    defaultWorld:GetSpawnX(),
+    defaultWorld:GetSpawnY(),
+    defaultWorld:GetSpawnZ()
+  )
 
   -- It doesn't work for me or I forgot to do something
   player:AddEntityEffect( 1,  60, 2) -- Gives speed 2 for 60 secs
@@ -44,8 +48,8 @@ end
 ---@param player table # https://api.cuberite.org/cPlayer.html
 function OnPlayerJoined(player)
   -- Safely for the server teleport a joined player to center
-  root:GetDefaultWorld():QueueTask(function()
-    root:DoWithPlayerByUUID(player:GetUUID(), teleportPlayerToCenter)
+  defaultWorld:QueueTask(function()
+    root:DoWithPlayerByUUID(player:GetUUID(), teleportPlayerToMainSpawn)
   end)
 
   -- Signalize to Cuberite that we don't need to print that the player joined to this server to other players
