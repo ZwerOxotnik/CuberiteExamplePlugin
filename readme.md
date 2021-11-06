@@ -80,9 +80,11 @@ Uncomment 5th and 6th lines in `webadmin.ini`. Remember, default password is's n
 Password=admin
 ```
 
-Open your browser and type this [localhost:8080](localhost:8080) as url to open WebAadmin. As the site loaded, press `Log in`, enter the username and password, then click `Sign in`.\
+Open your browser and type this [localhost:8080](http://localhost:8080/) as url to open WebAadmin. As the site loaded, press `Log in`, enter the username and password, then click `Sign in`.\
 After you signed in, press `Plugins` and find `HotReload`, `PluginMemory`, `PerfPages`, `APIFuzzing` and press `Enable` button for the plugins. (Btw, APIFuzzing will prevent loading if there are some mistakes in active plugins)\
 Now press `Reload now` button and you're ready to use plugins and the server.
+
+Don't forget to change [your rank](http://localhost:8080/webadmin/Core/Player+Ranks) to admin on the server.
 
 Important info
 --------------
