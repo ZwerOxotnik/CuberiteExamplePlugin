@@ -31,7 +31,7 @@ local function teleportPlayerToCenter(player)
   -- You can improve it using player:FindTeleportDestination
   player:TeleportToCoords(0, 80, 0) -- x, y, z
 
-  -- It seems doesn't work or I forgot to do something
+  -- It doesn't work for me or I forgot to do something
   player:AddEntityEffect( 1,  60, 2) -- Gives speed 2 for 60 secs
   player:AddEntityEffect(11,  60, 2) -- Gives resistance 2 for 60 secs
   player:AddEntityEffect(22,  60, 2) -- Gives absorption 2 for 60 secs
