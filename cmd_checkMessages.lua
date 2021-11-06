@@ -1,3 +1,5 @@
+local root = cRoot:Get() -- https://api.cuberite.org/cRoot.html
+
 ---@param split table<number, string> # https://api.cuberite.org/Writing-a-Cuberite-plugin.html
 ---@param player table # https://api.cuberite.org/cPlayer.html
 function HandleCheckMessagesCommand(split, player)
@@ -40,6 +42,32 @@ function HandleCheckMessagesCommand(split, player)
   return true
 end
 
+---@param player table # https://api.cuberite.org/cPlayer.html
+local function SendTestMessageAboveActionBad(player)
+  player:SendAboveActionBarMessage("Test message above action bar to each player")
+end
+
 function HandleConsoleCheckMessages(Split)
+  -- Broadcasts the specified message to all players
+  -- https://api.cuberite.org/cRoot.html
+  root:BroadcastChat("Global message")
+  root:BroadcastChatDeath("Global message about death") -- something is off
+  -- Use for a command that failed to run because of insufficient permissions, etc.
+  root:BroadcastChatFailure("Global message about failure") -- something is off
+  -- Use for a plugin that crashed, or similar.
+  root:BroadcastChatFatal("Global message about fatal error")
+  -- Use for informational messages, such as command usage
+  root:BroadcastChatInfo("Global message about something")
+  -- Use for players joining the server.
+  root:BroadcastChatJoin("Global message")
+  -- Use for players leaving the server.
+  root:BroadcastChatLeave("Global message")
+  -- Use for success messages.
+  root:BroadcastChatSuccess("Global message about success")
+  -- Use for concerning events, such as plugin reload etc.
+  root:BroadcastChatWarning("Global warning")
+
+  root:ForEachPlayer(SendTestMessageAboveActionBad)
+
 	LOG("Test message")
 end
