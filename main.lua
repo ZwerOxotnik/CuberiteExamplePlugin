@@ -10,7 +10,7 @@ local defaultWorld = root:GetDefaultWorld()
 -- function Initialize is called on plugin startup. It is the place where the plugin is set up.
 function Initialize(Plugin)
 	Plugin:SetName(g_PluginInfo.Name)
-  Plugin:SetVersion(2)
+  Plugin:SetVersion(3)
 
   --- https://api.cuberite.org/cPluginManager.html
   -- Add hooks
@@ -47,10 +47,12 @@ end
 
 ---@param player table # https://api.cuberite.org/cPlayer.html
 function OnPlayerJoined(player)
-  -- Safely for the server teleport a joined player to center
-  defaultWorld:QueueTask(function()
-    root:DoWithPlayerByUUID(player:GetUUID(), teleportPlayerToMainSpawn)
-  end)
+  if player:IsRespawnPointForced() then
+    -- Teleport the player to main spawn point (in a safe way for the server)
+    defaultWorld:QueueTask(function()
+      root:DoWithPlayerByUUID(player:GetUUID(), teleportPlayerToMainSpawn)
+    end)
+  end
 
   -- Signalize to Cuberite that we don't need to print that the player joined to this server to other players
   return true
