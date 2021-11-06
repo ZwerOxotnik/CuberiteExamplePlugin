@@ -10,6 +10,12 @@
       "tests"
   ],
   "Lua.diagnostics.globals": [
+    "Initialize",
+    "OnDisable",
+    "RegisterPluginInfoCommands",
+    "RegisterPluginInfoConsoleCommands",
+    "g_PluginInfo",
+    "RegisterPluginInfoCommands",
     "BannerPattern",
     "BossBarColor",
     "BossBarDivisionType",
