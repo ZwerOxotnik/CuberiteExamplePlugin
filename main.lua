@@ -37,12 +37,12 @@ local function teleportPlayerToMainSpawn(player)
     defaultWorld:GetSpawnZ()
   )
 
-  -- It doesn't work for me or I forgot to do something
-  player:AddEntityEffect( 1,  60, 2) -- Gives speed 2 for 60 secs
-  player:AddEntityEffect(11,  60, 2) -- Gives resistance 2 for 60 secs
-  player:AddEntityEffect(22,  60, 2) -- Gives absorption 2 for 60 secs
-  player:AddEntityEffect(22, 120, 2) -- Gives fire resistance 2 for 120 secs
-  player:AddEntityEffect(22, 120, 2) -- Gives water breathing 2 for 120 secs
+  -- Add some effects on the player
+  player:AddEntityEffect( 1,  60 * 20, 2) -- Gives speed 2 for 60 secs
+  player:AddEntityEffect(11,  60 * 20, 2) -- Gives resistance 2 for 60 secs
+  player:AddEntityEffect(22,  60 * 20, 2) -- Gives absorption 2 for 60 secs
+  player:AddEntityEffect(22, 120 * 20, 2) -- Gives fire resistance 2 for 120 secs
+  player:AddEntityEffect(22, 120 * 20, 2) -- Gives water breathing 2 for 120 secs
 end
 
 ---@param player table # https://api.cuberite.org/cPlayer.html
