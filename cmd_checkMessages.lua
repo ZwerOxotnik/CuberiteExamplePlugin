@@ -39,7 +39,7 @@ function HandleCheckMessagesCommand(split, player)
 		:SetMessageType(mtJoin) -- It is a join-message
 	)
 
-  local clientHandle = player:GetClientHandle()
+  local clientHandle = player:GetClientHandle() -- https://api.cuberite.org/cClientHandle.html
   clientHandle:SendSetTitle(cCompositeChat():AddTextPart("Test title"))
 	clientHandle:SendSetSubTitle(cCompositeChat():AddTextPart("Test subtitle"))
 	clientHandle:SendTitleTimes(20, 5 * 20, 20)
