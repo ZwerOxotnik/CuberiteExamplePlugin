@@ -50,6 +50,7 @@ git clone https://github.com/Rorkh/HotReload || cd HotReload && git pull && cd .
 git clone https://github.com/madmaxoft/PluginMemory || cd PluginMemory && git pull && cd ..
 git clone https://github.com/cuberite/APIFuzzing || cd APIFuzzing && git pull && cd ..
 git clone https://github.com/cuberite/PerfPages || cd PerfPages && git pull && cd ..
+git clone https://github.com/mathiascode/CommandSpy || cd CommandSpy && git pull && cd ..
 cd ..
 ```
 
@@ -81,7 +82,7 @@ Password=admin
 ```
 
 Open your browser and type this [localhost:8080](http://localhost:8080/) as url to open WebAadmin. As the site loaded, press `Log in`, enter the username and password, then click `Sign in`.\
-After you signed in, press `Plugins` and find `HotReload`, `PluginMemory`, `PerfPages`, `APIFuzzing` and press `Enable` button for the plugins. (Btw, APIFuzzing will prevent loading if there are some mistakes in active plugins)\
+After you signed in, press `Plugins` and find `HotReload`, `PluginMemory`, `PerfPages`, `APIFuzzing`, `CommandSpy` and press `Enable` button for the plugins. (Btw, APIFuzzing will prevent loading if there are some mistakes in active plugins)\
 Now press `Reload now` button and you're ready to use plugins and the server.
 
 Don't forget to change [your rank](http://localhost:8080/webadmin/Core/Player+Ranks) to admin on the server.
