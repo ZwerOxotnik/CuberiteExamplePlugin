@@ -6,6 +6,7 @@
 g_PluginInfo =
 {
 	Name = "CuberiteExamplePlugin",
+  Version = 3,
 	Date = "2021-11-06",
 	SourceLocation = "https://github.com/ZwerOxotnik/CuberiteExamplePlugin",
 	Description = "[Unofficial][WIP] This is an example plugin to get you comfortable with Cuberite plugins etc",

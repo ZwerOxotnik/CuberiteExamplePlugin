@@ -10,7 +10,7 @@ local defaultWorld = root:GetDefaultWorld()
 -- function Initialize is called on plugin startup. It is the place where the plugin is set up.
 function Initialize(Plugin)
 	Plugin:SetName(g_PluginInfo.Name)
-  Plugin:SetVersion(3)
+  Plugin:SetVersion(g_PluginInfo.Version)
 
   --- https://api.cuberite.org/cPluginManager.html
   -- Add hooks
