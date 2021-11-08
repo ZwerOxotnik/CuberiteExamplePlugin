@@ -39,6 +39,11 @@ function HandleCheckMessagesCommand(split, player)
 		:SetMessageType(mtJoin) -- It is a join-message
 	)
 
+  local clientHandle = player:GetClientHandle()
+  clientHandle:SendSetTitle(cCompositeChat():AddTextPart("Test title"))
+	clientHandle:SendSetSubTitle(cCompositeChat():AddTextPart("Test subtitle"))
+	clientHandle:SendTitleTimes(20, 5 * 20, 20)
+
   return true
 end
 
