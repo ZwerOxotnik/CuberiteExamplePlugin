@@ -18,6 +18,12 @@ g_PluginInfo =
       Handler = HandleCheckMessagesCommand,
       HelpString = "Prints various test messages.",
     },
+    ["/testItemMod"] =
+    {
+      Permission = "CuberiteExamplePlugin.testItemMod",
+      Handler = HandleTestItemModCommand,
+      HelpString = "Modifies your item with enchantments.",
+    },
   },
 	ConsoleCommands = {
     ["checkMessages"] =
