@@ -42,7 +42,13 @@ curl -L https://raw.githubusercontent.com/pkulchenko/ZeroBranePackage/master/cub
 mkdir -p Cuberite &&\
 	cd Cuberite &&\
 	curl -sSfL https://download.cuberite.org | sh &&\
-	./Cuberite
+	./Cuberite <<- EOF
+		load APIDump
+		api
+		apicheck
+		restart
+		stop
+	EOF
 
 # Download important plugins for developing
 cd Plugins
@@ -53,13 +59,6 @@ git clone https://github.com/cuberite/PerfPages || cd PerfPages && git pull && c
 git clone https://github.com/mathiascode/CommandSpy || cd CommandSpy && git pull && cd ..
 cd ..
 ```
-
-After Cuberite loaded your server, use the commands below one by one to get API files & .luacheckrc
-
-* load APIDump
-* api
-* apicheck
-* stop
 
 ```sh
 # Copy the API into ZBS
