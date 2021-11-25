@@ -1,0 +1,17 @@
+on:
+  schedule:
+    # * is a special character in YAML so you have to quote this string
+    - cron:  '* */12 * * *'
+
+name: Check cuberite API
+jobs:
+  checkCuberiteAPI:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+      - name: Check cuberite API
+        uses: nebularg/actions-luacheck@v1
+        with:
+          config: https://builds.cuberite.org/job/cuberite/job/master/lastSuccessfulBuild/artifact/gcc_Release/Server/.luacheckrc
+          # https://luacheck.readthedocs.io/en/stable/cli.html
+          args: '--no-max-line-length -g -u -i 6*'
